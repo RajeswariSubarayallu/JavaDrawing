@@ -1,0 +1,3 @@
+rootProject.name='CalcOperator'
+include ':app'
+include ':openCVLibrary343'
