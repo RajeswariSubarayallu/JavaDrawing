@@ -202,24 +202,28 @@ public class MainActivity extends Activity {
             re4 = re3+re4;
             Integer r=Integer.parseInt(re1) + Integer.parseInt(re4);
             ResultDigits.append(""+r.toString());
+            Toast.makeText(getApplicationContext(),re1+"+"+re4+"="+ResultDigits,Toast.LENGTH_LONG).show();
         }
         else if(re2.equals("11"))
         {
             re4 = re3+re4;
             Integer r=Integer.parseInt(re1) - Integer.parseInt(re4);
             ResultDigits.append(""+r.toString());
+            Toast.makeText(getApplicationContext(),re1+"-"+re4+"="+ResultDigits,Toast.LENGTH_LONG).show();
         }
         else if(re2.equals("12"))
         {
             re4 = re3+re4;
             Integer r=Integer.parseInt(re1) * Integer.parseInt(re4);
             ResultDigits.append(""+r.toString());
+            Toast.makeText(getApplicationContext(),re1+"*"+re4+"="+ResultDigits,Toast.LENGTH_LONG).show();
         }
         else if(re2.equals("13"))
         {
             re4 = re3+re4;
             Integer r=Integer.parseInt(re1) / Integer.parseInt(re4);
             ResultDigits.append(""+r.toString());
+            Toast.makeText(getApplicationContext(),re1+"/"+re4+"="+ResultDigits,Toast.LENGTH_LONG).show();
         }
 
         if(re3.equals("10"))
@@ -227,31 +231,35 @@ public class MainActivity extends Activity {
             re1 = re1+re2;
             Integer r=Integer.parseInt(re1) + Integer.parseInt(re4);
             ResultDigits.append(""+r.toString());
+            Toast.makeText(getApplicationContext(),re1+"+"+re4+"="+ResultDigits,Toast.LENGTH_LONG).show();
         }
         else if(re3.equals("11"))
         {
             re1 = re1+re2;
             Integer r=Integer.parseInt(re1) - Integer.parseInt(re4);
             ResultDigits.append(""+r.toString());
+            Toast.makeText(getApplicationContext(),re1+"-"+re4+"="+ResultDigits,Toast.LENGTH_LONG).show();
         }
         else if(re3.equals("12"))
         {
             re1 = re1+re2;
             Integer r=Integer.parseInt(re1) * Integer.parseInt(re4);
             ResultDigits.append(""+r.toString());
+            Toast.makeText(getApplicationContext(),re1+"*"+re4+"="+ResultDigits,Toast.LENGTH_LONG).show();
         }
         else if(re3.equals("13"))
         {
             re1 = re1+re2;
             Integer r=Integer.parseInt(re1) / Integer.parseInt(re4);
             ResultDigits.append(""+r.toString());
+            Toast.makeText(getApplicationContext(),re1+"/"+re4+"="+ResultDigits,Toast.LENGTH_LONG).show();
         }
      //   if(re2.isEmpty())
        //     ResultDigits.append(""+re1);
 
 
         Log.i(LOG_TAG,"result"+ResultDigits);
-        Toast.makeText(getApplicationContext(),ResultDigits,Toast.LENGTH_LONG).show();
+     //   Toast.makeText(getApplicationContext(),ResultDigits,Toast.LENGTH_LONG).show();
         Bitmap b = Bitmap.createBitmap(result.width(),result.height(), Bitmap.Config.ARGB_8888);
         Utils.matToBitmap(result,b);
         SaveImage(b,0);
